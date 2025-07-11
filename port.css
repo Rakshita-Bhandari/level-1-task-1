@@ -1,0 +1,93 @@
+* {
+  margin: 2;
+  padding: 2;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+header {
+  background-color: #222;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+header nav ul li {
+  margin: 10px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero-title {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #444;
+  color: white;
+  padding: 50px 20px;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.hero .btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.hero-img img {
+  width: 200px;
+  border-radius: 10px;
+}
+
+#about {
+  background-color: white;
+  padding: 40px 20px;
+  text-align: left;
+}
+
+#about .btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  margin-top: 20px;
+  display: inline-block;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
