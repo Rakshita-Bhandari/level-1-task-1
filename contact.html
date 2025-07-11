@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Rakshita Bhandari</title>
+
+  <!-- EmailJS Library -->
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("Toh9zEXBfb2qu4MKu"); // 🔁 Replace this with your Public Key
+    })();
+  </script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #1e1e1e;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    h1 {
+      background-color: #111;
+      color: white;
+      padding: 30px 0;
+      margin: 0;
+    }
+
+    .form-container {
+      margin: 40px auto;
+      max-width: 500px;
+      padding: 20px;
+      background-color: #2e2e2e;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      background-color: #444;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+
+    input::placeholder, textarea::placeholder {
+      color: #aaa;
+    }
+
+    button {
+      background-color: #007BFF;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .btn-home {
+      margin: 30px auto;
+      background-color: #007BFF;
+      color: white;
+      padding: 12px 24px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    .btn-home:hover {
+      background-color: #0056b3;
+    }
+
+    #status-msg {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Contact Us</h1>
+
+  <div class="form-container">
+    <form id="contact-form">
+      <input type="text" name="from_name" placeholder="Your Name" required />
+      <input type="email" name="from_email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p id="status-msg"></p>
+  </div>
+
+  <a href="hi.html" class="btn-home">Back to Home</a>
+
+  <script>
+    const form = document.getElementById("contact-form");
+    const statusMsg = document.getElementById("status-msg");
+
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      emailjs.sendForm("service_78kyad7", "template_qxge45o", this) // 🔁 Replace these
+        .then(function(response) {
+          statusMsg.innerHTML = "✅ Message sent successfully!";
+          statusMsg.style.color = "lightgreen";
+          form.reset();
+        }, function(error) {
+          statusMsg.innerHTML = "❌ Failed to send. Please try again.";
+          statusMsg.style.color = "salmon";
+        });
+    });
+  </script>
+
+</body>
+</html>
